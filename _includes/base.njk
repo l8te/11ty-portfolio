@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ metadata.title }}</title>
+</head>
+
+<body>
+    {{ collections.nav | eleventyNavigation | eleventyNavigationToHtml | safe }}
+    <h1>{{ title }}</h1>
+    <h2>{{ description }}</h2>
+    {{ content | safe }}
+</body>
+<footer>
+    &copy; {{ metadata.title }} | this is some footer
+    <br />
+    <hr />
+    <ul>
+        {%- for post in collections.all -%}
+        <li><a href="{{ post.url }}">{{ post.url }}</a></li>
+        {%- endfor -%}
+    </ul>
+</footer>
+
+</html>

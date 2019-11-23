@@ -1,0 +1,11 @@
+---
+layout: base.njk
+title: {{ title }}
+---
+
+{{ title }}
+<p>this uses the "book" template</p>
+{{ content | safe }}
+
+
+{{ collections.page | eleventyNavigation("{{ title }}") | eleventyNavigationToHtml | safe }}

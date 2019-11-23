@@ -1,0 +1,6 @@
+---
+layout: base.njk
+---
+{{ content | safe }}
+
+{{ collections.book | eleventyNavigation | eleventyNavigationToHtml | safe }}
