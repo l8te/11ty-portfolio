@@ -4,6 +4,8 @@ title: book 01
 description: Wonton soup
 eleventyNavigation:
   key: book01
+  parent: library
+ID: book01
 ---
 
 <!-- note: a blank or additional tag breaks the link of library.json -->

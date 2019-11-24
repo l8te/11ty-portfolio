@@ -10,6 +10,7 @@ module.exports = function(collection) {
           case "all":
           case "nav":
           case "book":
+          case "page":
           return false;
         }
 

@@ -1,11 +1,21 @@
 ---
 layout: base.njk
-title: {{ title }}
 ---
 
-{{ title }}
 <p>this uses the "book" template</p>
 {{ content | safe }}
 
+<!-- may need to do this using a regular collection NOT eleventyNavigation -->
 
-{{ collections.page | eleventyNavigation("{{ title }}") | eleventyNavigationToHtml | safe }}
+<!-- {{ collections.page | eleventyNavigation("book") | eleventyNavigationToHtml | safe }} -->
+
+
+    <!-- there is probably a better way to do this -->
+
+<ul>
+    {% for page in collections.page %}
+    {% if page.data.ID == ID %}
+    <li><a href="{{ page.url }}"> <img src="../pages/img/{{ page.data.image }}" style="max-height: 100px;" /> - {{ page.data.title }} - {{ page.data.description }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>

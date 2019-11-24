@@ -5,6 +5,9 @@ layout: base.njk
 
 {{ content | safe }}
 
+
+<img src="../img/{{ image }}" alt="{{ description }}" />
+
 <p>
  {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag }}/{% endset %}
