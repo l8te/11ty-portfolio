@@ -7,6 +7,7 @@ pagination:
     - all
     - nav
     - book
+    - page
   addAllPagesToCollections: true
 layout: base.njk
 renderData:
@@ -15,6 +16,7 @@ permalink: /tags/{{ tag }}/
 ---
 <h1>Tagged “{{ tag }}”</h1>
 
+<!-- this works, but only on the Tags page itselfs -->
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
 

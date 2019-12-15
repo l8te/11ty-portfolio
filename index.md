@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Home
+title: latewerks
 description: Network receding shrine
 tags: 
     - nav

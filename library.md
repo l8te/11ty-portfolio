@@ -1,6 +1,6 @@
 ---
 layout: library
-title: Library
+title: library
 description: Sentient boy, urban camera
 tags: 
     - nav
