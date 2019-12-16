@@ -4,6 +4,7 @@ title: Parts Inside
 description: The Living Gallery
 tags: 
     - show
+ID: partsInside
 ---
 
 this will need a new layout
