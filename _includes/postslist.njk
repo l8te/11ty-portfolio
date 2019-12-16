@@ -5,8 +5,8 @@
         <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
 <!-- statement to evaluate tags and only return the ones we want -->
         {% for tag in post.data.tags %}
-        {% if tag == "book" %}
-        {% elif tag == "page" %}
+        {% if tag == "collection" %}
+        {% elif tag == "item" %}
 
         {% else %}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}

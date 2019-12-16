@@ -17,13 +17,7 @@
     <h2>{{ description }}</h2>
     {{ content | safe }}
     <!-- here: eval if this is home, if home show "shows" list -->
-    <ul>
-        {%- for show in collections.show -%}
-        {%- if page.url == "/" -%}
-        <li><a href="{{ show.url }}"> {{ show.data.title }} - {{ show.data.description }}</a></li>
-        {%- endif -%}
-        {%- endfor -%}
-    </ul>
+    
 </body>
 <footer>
     &copy; {{ metadata.title }} | this is some footer

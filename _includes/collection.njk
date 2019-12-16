@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+
+<p>this uses the "collection" template</p>
+{{ content | safe }}
+
+<!-- there is probably a better way to do this -->
+<!-- ID comparason isn't working? -->
+
+<ul>
+    {% for item in collections.item %}
+
+    <li><a href="{{ item.url }}"> <img src="../items/img/{{ item.data.image }}" style="max-height: 100px;" /> - {{ item.data.title }} - {{ item.data.description }}</a></li>
+
+    {% endfor %}
+</ul>
