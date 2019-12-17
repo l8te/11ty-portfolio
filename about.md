@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: base
 title: about
 description: Skyscraper bicycle
 tags: 
