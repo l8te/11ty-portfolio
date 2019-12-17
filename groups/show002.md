@@ -1,7 +1,7 @@
 ---
-layout: collection
-title: book 02
-description: Stumptown
+layout: group
+title: Stumptown show
+description: Man pistol 
 eleventyNavigation:
   key: Stumptown
   parent: shows

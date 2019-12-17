@@ -1,7 +1,7 @@
 ---
-layout: collection
+layout: group
 title: PARTS INSIDE
-description: Wonton soup
+description: Kanji construct gang
 eleventyNavigation:
   key: Parts Inside
   parent: shows

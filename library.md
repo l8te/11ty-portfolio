@@ -1,5 +1,5 @@
 ---
-layout: collection
+layout: page
 title: library
 description: Sentient boy, urban camera
 tags: 

@@ -1,5 +1,5 @@
 ---
-layout: collection
+layout: group
 title: book 01
 description: Wonton soup
 eleventyNavigation:

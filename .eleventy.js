@@ -5,8 +5,12 @@ const fs = require("fs");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
+ 
 
 module.exports = function(eleventyConfig) {
+  const cacheBusterOptions = {};
+  eleventyConfig.addPlugin(cacheBuster(cacheBusterOptions));
   // eleventyConfig.addPlugin(pluginRss);
   // eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);

@@ -1,5 +1,5 @@
 ---
-layout: collection
+layout: group
 title: book 02
 description: Semiotics concrete
 eleventyNavigation:

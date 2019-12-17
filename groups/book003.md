@@ -1,5 +1,5 @@
 ---
-layout: collection
+layout: group
 title: book 03
 description: Sub-orbital monofilament
 eleventyNavigation:
