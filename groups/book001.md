@@ -2,6 +2,7 @@
 layout: group
 title: book 01
 description: Wonton soup
+image: 201702_20170805_0008.jpg
 eleventyNavigation:
   key: book01
   parent: library

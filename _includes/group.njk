@@ -5,15 +5,13 @@ layout: base.njk
 <p>this uses the "group" template</p>
 {{ content | safe }}
 
-<p>this hsould have a list of items</p>
-<!-- there is probably a better way to do this -->
-<!-- ID comparason isn't working? -->
+<p>this should have a list of items</p>
 
-<!-- <ul>
-    {% for group in collections.group %}
-
-    <li><a href="{{ group.url }}"> <img src="../groups/img/{{ group.data.image }}" style="max-height: 100px;" /> - {{ group.data.title }} - {{ group.data.description }}</a></li>
-
+<ul>
+    {% for item in collections.item %}
+    {% if item.data.ID == ID %}
+    <li><a href="{{ item.url }}">
+<img src="/img/{{ item.data.image }}" alt="{{ description }}" style="max-height: 100px;" />{{ item.data.title }}</a></li>
+    {% endif %}
     {% endfor %}
 </ul>
- -->

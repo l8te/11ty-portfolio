@@ -2,6 +2,7 @@
 layout: group
 title: book 03
 description: Sub-orbital monofilament
+image: 201702_20170805_0008.jpg
 eleventyNavigation:
   key: book03
   parent: library

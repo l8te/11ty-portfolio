@@ -1,7 +1,8 @@
 ---
 layout: group
 title: Stumptown show
-description: Man pistol 
+description: Man pistol
+image: 201702_20170805_0008.jpg 
 eleventyNavigation:
   key: Stumptown
   parent: shows

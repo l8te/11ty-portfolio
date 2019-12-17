@@ -2,10 +2,11 @@
 layout: base.njk
 ---
 <p>this uses the "item" template</p>
-<img src="../img/{{ image }}" alt="{{ description }}" style="max-height: 300px;" />
+<img src="/img/{{ image }}" alt="{{ description }}" style="max-height: 300px;" />
 {{ content | safe }}
 
-<!-- revise this to use collections/items -->
+<p>weird empty bullet happening</p>
+<h3>Tags:</h3>
 <ul>
     {% for tag in collections.tagList %}
     <li>

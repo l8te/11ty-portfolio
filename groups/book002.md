@@ -2,6 +2,7 @@
 layout: group
 title: book 02
 description: Semiotics concrete
+image: 201702_20170805_0008.jpg
 eleventyNavigation:
   key: book02
   parent: library

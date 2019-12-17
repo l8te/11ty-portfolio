@@ -39,7 +39,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
-  // eleventyConfig.addPassthroughCopy({ "img": "collections/items/img" });
+  eleventyConfig.addPassthroughCopy({ "img": "groups/items/img" });
 
   eleventyConfig.addPassthroughCopy('css')
   return {
@@ -78,7 +78,8 @@ module.exports = function(eleventyConfig) {
       "md",
       "njk",
       "html",
-      "liquid"
+      "liquid",
+      "png"
     ],
 
     // If your site lives in a different subdirectory, change this.
