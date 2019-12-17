@@ -2,20 +2,11 @@
 <html lang="en">
 
 <head>
-    <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>{{ metadata.title }}</title>
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet"> -->
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/tachyons.css">
     <!-- <link rel="stylesheet" href="/css/custom.css"> -->
 </head>
@@ -26,13 +17,7 @@
     <h2>{{ description }}</h2>
     {{ content | safe }}
     <!-- here: eval if this is home, if home show "shows" list -->
-    <ul>
-        {%- for show in collections.show -%}
-        {%- if page.url == "/" -%}
-        <li><a href="{{ show.url }}"> {{ show.data.title }} - {{ show.data.description }}</a></li>
-        {%- endif -%}
-        {%- endfor -%}
-    </ul>
+    
 </body>
 <footer>
     &copy; {{ metadata.title }} | this is some footer

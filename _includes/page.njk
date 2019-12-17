@@ -1,18 +1,18 @@
 ---
 layout: base.njk
 ---
+
 <p>this uses the "page" template</p>
-<img src="../img/{{ image }}" alt="{{ description }}" style="max-height: 300px;" />
 {{ content | safe }}
+
+<!-- there is probably a better way to do this -->
+<!-- ID comparason isn't working? -->
+
+
 <ul>
-    {% for tag in collections.tagList %}
-    <li>
-        {% if tag == "book" %}
-        {% elif tag == "page" %}
-        {% else %}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
-        {% endif %}
-    </li>
+    {% for group in collections.group %}
+
+    <li><a href="{{ group.url }}"> <img src="../groups/img/{{ group.data.image }}" style="max-height: 100px;" /> - {{ group.data.title }} - {{ group.data.description }}</a></li>
+
     {% endfor %}
 </ul>

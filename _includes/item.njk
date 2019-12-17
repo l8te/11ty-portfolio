@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+<p>this uses the "item" template</p>
+<img src="../img/{{ image }}" alt="{{ description }}" style="max-height: 300px;" />
+{{ content | safe }}
+
+<!-- revise this to use collections/items -->
+<ul>
+    {% for tag in collections.tagList %}
+    <li>
+        {% if tag == "collection" %}
+        {% elif tag == "item" %}
+        {% else %}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
