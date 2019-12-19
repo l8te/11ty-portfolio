@@ -1,17 +1,15 @@
 ---
 layout: base.njk
 ---
-
 <p>this uses the "group" template</p>
 {{ content | safe }}
-
-<p>this should have a list of items</p>
-
-<ul>
+<ul class="list flex justify-between ph0 mh0">
     {% for item in collections.item %}
     {% if item.data.ID == ID %}
-    <li><a href="{{ item.url }}">
-<img src="/img/{{ item.data.image }}" alt="{{ description }}" style="max-height: 100px;" />{{ item.data.title }}</a></li>
+    <li class="pv2 ph2">
+        <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ description }}" class="nested-img img" /></a>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </li>
     {% endif %}
     {% endfor %}
 </ul>

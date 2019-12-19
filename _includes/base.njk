@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>{{ metadata.title }}</title>
@@ -11,24 +10,34 @@
     <!-- <link rel="stylesheet" href="/css/custom.css"> -->
 </head>
 
-<body class="bg-near-white mid-gray">
-    {{ collections.nav | eleventyNavigation | eleventyNavigationToHtml | safe }}
-    <h1>{{ title }}</h1>
-    <h2>{{ description }}</h2>
+<body class="bg-near-white mid-gray helvetica fw3 ph3 pt3">
+    <div>
+        {{ collections.nav | eleventyNavigation | eleventyNavigationToHtml({
+            listElement: "div", listItemElement: "div", listClass: "list", listItemClass: "fr pl2"
+        }) | safe }}
+
+    </div>
+<article class="fw3">
+    
+    <h1 class="georgia fw1">{{ title }}</h1>
+    <h2 class="fw3">{{ description }}</h2>
     {{ content | safe }}
     <!-- here: eval if this is home, if home show "shows" list -->
     
-</body>
+</article>
 <footer>
     &copy; {{ metadata.title }} | this is some footer
-    <br />
+    
+</footer>
+</body>
+</html>
+
+
+<!-- <br /> -->
     <!-- this is for QA - shows all pages -->
-    <hr />
+    <!-- <hr />
     <ul>
         {%- for post in collections.all -%}
         <li><a href="{{ post.url }}">{{ post.url }}</a></li>
         {%- endfor -%}
-    </ul>
-</footer>
-
-</html>
+    </ul> -->

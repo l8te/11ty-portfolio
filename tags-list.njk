@@ -3,8 +3,13 @@ permalink: /tags/
 layout: base
 ---
 <h1>Tags</h1>
-
-{% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
-{% endfor %}
+<p>
+    <ul>
+        {% for tag in collections.tagList %}
+        <li class="f6 link dim ba ph3 pv2 mb2 dib black">
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</p>
