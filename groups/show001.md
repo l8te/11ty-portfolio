@@ -3,6 +3,8 @@ layout: group
 title: PARTS INSIDE
 description: Kanji construct gang
 image: 201702_20170805_0008.jpg
+tags:
+    - featured
 eleventyNavigation:
   key: Parts Inside
   parent: shows

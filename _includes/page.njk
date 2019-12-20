@@ -1,16 +1,26 @@
 ---
 layout: base.njk
 ---
-<p>this uses the "page" template</p>
-{{ content | safe }}
-<!-- see about removing extra padding from the far left and right of the flexbox -->
-<ul class="list flex justify-between ph0 mh0">
+<!-- this uses the "page" template -->
+<p class="lh-copy">
+    {{ content | safe }}
+</p>
+
+<div>
     {% for group in collections.group %}
     {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
-    <li class="pv2 ph2">
-        <a href="{{ group.url }}"><img src="/img/{{ group.data.image }}" alt="{{ description }}" class="nested-img img" /></a>
-        <a href="{{ group.url }}">{{ group.data.title }}</a>
-    </li>
+    <div class="cf">
+        <div class="fl w-100 w-25-ns pr3">
+            <a href="{{ group.url }}"><img src="/img/{{ group.data.image }}" alt="{{ group.data.title }}" class="nested-img img" /></a>
+        </div>
+        <div class="fl w-100 w-75-ns bt bw2">
+            <a href="{{ group.url }}"><h3 class="fw3 link">{{ group.data.title }}</h3></a>
+                <p>{{ group.data.description }}</p>
+            <p> 
+            </p>
+        </div>
+    </div>
     {% endif %}
     {% endfor %}
-</ul>
+</div>
+

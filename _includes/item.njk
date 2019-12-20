@@ -13,6 +13,7 @@ layout: base.njk
             <li class="di">
                 {% if tag == "group" %}
                 {% elif tag == "item" %}
+                {% elif tag == "featured" %}
                 {% else %}
                 {% set tagUrl %}/tags/{{ tag }}/{% endset %}
                 <a href="{{ tagUrl | url }}" class="f6 link dim ba ph3 pv2 mb2 dib black">{{ tag }}</a>
@@ -23,7 +24,7 @@ layout: base.njk
 
         <!-- <time class="f6 ttu tracked gray">Sometime before 1967</time> -->
     </header>
-    <div class="fn fl-ns w-50-ns">
+    <div class="fn fl-ns w-50-ns mw-100">
         <img src="/img/{{ image }}" alt="{{ title }}" class="nested-img img" />
     </div>
 </article>

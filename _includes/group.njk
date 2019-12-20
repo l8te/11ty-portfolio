@@ -1,15 +1,21 @@
 ---
 layout: base.njk
 ---
-<p>this uses the "group" template</p>
-{{ content | safe }}
-<ul class="list flex justify-between ph0 mh0">
-    {% for item in collections.item %}
-    {% if item.data.ID == ID %}
-    <li class="pv2 ph2">
-        <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ description }}" class="nested-img img" /></a>
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
-    </li>
-    {% endif %}
-    {% endfor %}
-</ul>
+<!-- <p>this uses the "group" template</p> -->
+<p class="lh-copy">{{ content | safe }}</p>
+<div class="bt bw2">
+    <div class="cf lh-copy">
+        {% for item in collections.item %}
+        {% if item.data.ID == ID %}
+        <div class="fl w-100 w-25-ns pr3">
+            <div class="">
+                <a href="{{ item.url }}">
+                    <h2 class="fw1 lh-copy">{{ item.data.title }}</h2>
+                </a>
+                <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ description }}" class="nested-img img h5" /></a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
