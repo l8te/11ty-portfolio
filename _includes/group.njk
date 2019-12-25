@@ -2,6 +2,7 @@
 layout: base.njk
 ---
 <!-- <p>this uses the "group" template</p> -->
+<article>
 <p class="lh-copy">{{ content | safe }}</p>
 <div class="bt bw2">
     <div class="cf lh-copy">
@@ -10,7 +11,7 @@ layout: base.njk
         <div class="fl w-100 w-25-ns pr3">
             <div class="">
                 <a href="{{ item.url }}">
-                    <h2 class="fw1 lh-copy">{{ item.data.title }}</h2>
+                    <h3 class="fw3 link lh-copy">{{ item.data.title }}</h3>
                 </a>
                 <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ description }}" class="nested-img img h5" /></a>
             </div>
@@ -19,3 +20,4 @@ layout: base.njk
         {% endfor %}
     </div>
 </div>
+</article>

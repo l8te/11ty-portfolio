@@ -12,6 +12,7 @@ module.exports = function(collection) {
           case "group":
           case "page":
           case "item":
+          case "featured":
           return false;
         }
 

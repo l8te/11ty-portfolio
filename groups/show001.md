@@ -1,7 +1,7 @@
 ---
 layout: group
 title: PARTS INSIDE
-description: Kanji construct gang
+description: Solo show at The Living Gallery, Brooklyn, NYC.
 image: 201702_20170805_0008.jpg
 tags:
     - featured

@@ -18,36 +18,41 @@
         }) | safe }}
     </div>
     <article class="lh-copy">
-        <h1 class="georgia fw1 lh-title">{{ title }}</h1>
-        <h2 class="fw3 lh-title">{{ description }}</h2>
+        <h1 class="georgia fw1 lh-title">{{ metadata.title }}</h1>
+        <!-- if this is not the homepage, display the page title -->
+        {% if page.url != "/" %}
+        <h2 class="fw3 lh-title">{{ title }}</h2>
+        {%- endif -%}
         <p>
-        {{ content | safe }}
+            {{ content | safe }}
         </p>
-
-
         <!-- here: eval if this is home, if home show "shows" list -->
+        <!-- need to add links -->
         {% if page.url == "/" %}
         <h2 class="fw1 georgia lh-title">Featured</h2>
         {%- for featured in collections.featured -%}
-        <h2 class="fw3 lh-title">{{ featured.data.title }}</h2>
-
-        <div>
+        <a href="{{ featured.url }}" class="fw3 lh-title">
+            {{ featured.data.title }}
+        </a>
+        <div class="pt3">
             <div class="cf">
                 <div class="fl w-100 w-25-ns pr3">
-                    <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="nested-img img" />
+                    <a href="{{ featured.url }}">
+                        <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="nested-img img" />
+                    </a>
                 </div>
                 <div class="fl w-100 w-75-ns bt bw2">
                     <p>
-                    {{ content | safe }}
+                        {{ featured.data.description }}
                     </p>
                 </div>
-            </div>      
+            </div>
         </div>
         {% endfor %}
         {% endif %}
     </article>
     <footer class="pt3 mt3 bt bw2">
-        &copy; {{ metadata.title }} | this is some footer
+        &copy; {{ metadata.title }} | built with 11ty and Tachyons
     </footer>
 </body>
 
