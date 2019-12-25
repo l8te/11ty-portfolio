@@ -3,6 +3,7 @@ layout: group
 title: Stumptown show
 description: Man pistol
 image: 201702_20170805_0008.jpg 
+date: 2020-01-10
 eleventyNavigation:
   key: Stumptown
   parent: shows

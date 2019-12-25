@@ -9,6 +9,12 @@ eleventyNavigation:
   order: 1
 ---
 
-Pistol shanty town 8-bit faded motion girl drugs tower order-flow camera. Skyscraper bicycle j-pop otaku advert DIY sign towards human voodoo god. Tokyo industrial grade into San Francisco papier-mache franchise chrome bicycle gang soul-delay rain sub-orbital. Office spook gang industrial grade modem shoes vehicle. Camera receding film smart-concrete military-grade Chiba courier motion realism shanty town pen-ware vehicle. Render-farm claymore mine tattoo RAF warehouse sunglasses geodesic into gang. 
+Lee has been making art in various formats for basically his entire life-- some of his earliest recollections revolve around drawing and making paper cuts outs of characters as new friends for his Ninja Turtles and Barbie dolls. 
 
-links where you can buy stuff
+After a multi-year stretch focusing primarily on digital art (and at least one attempt to "quit" art completely), Lee has returned to the analog art world with a new-found enthusiasm for creating tangible things. 
+
+His work currently focuses on themes of transformation, repetition, and the search for meaning in the absurd landscape of dreams.
+
+[Latewerks](https://www.instagram.com/latewerks/ "Latewerks on Instagram")
+
+Tangible goods can be purchased via the following links:
