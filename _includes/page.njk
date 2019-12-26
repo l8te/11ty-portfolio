@@ -1,24 +1,26 @@
 ---
 layout: base.njk
 ---
-<p>this uses the "page" template</p>
+<!-- <p>this uses the "page" template</p> -->
 <p class="">
     {{ content | safe }}
 </p>
-<ul>
-    {% for group in collections.group %}
-    {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
-    <li>
-        <div class="">
-            <a href="{{ group.url | url }}"><img src="/img/{{ group.data.image }}" alt="{{ group.data.title }}" class="" /></a>
-        </div>
-        <div class="">
-            <a href="{{ group.url | url }}">
-                <h3 class="">{{ group.data.title }}</h3>
-            </a>
-            <p>{{ group.data.description }}</p>
-        </div>
-    </li>
-    {% endif %}
-    {% endfor %}
-</ul>
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
+        {% for group in collections.group %}
+        {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
+        <li class="fl w-100 w-25-ns pr3 pb3 mb3">
+            <div class="bt bw3">
+                <a href="{{ group.url | url }}" class="link">
+                    <h3 class="">{{ group.data.title }}</h3>
+                </a>
+            </div>
+            <div class="pb3">
+                <a href="{{ group.url | url }}" class="link"><img src="/img/{{ group.data.image }}" alt="{{ group.data.title }}" class="" /></a>
+                <!-- <p>{{ group.data.description }}</p> -->
+            </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>

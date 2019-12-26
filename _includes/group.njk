@@ -1,19 +1,25 @@
 ---
 layout: base.njk
 ---
-<p>this uses the "group" template</p>
-<p class="">{{ content | safe }}</p>
-
-    <ul class="">
+<!-- <p>this uses the "group" template</p> -->
+<p class="">
+    {{ content | safe }}
+</p>
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
         {% for item in collections.item %}
         {% if item.data.ID == ID %}
-            <li class="">
-                <a href="{{ item.url }}">
+        <li class="fl w-100 w-25-ns pr3 pb3 mb3">
+            <div class="bt bw3">
+                <a href="{{ item.url | url}}" class="link">
                     <h3 class="">{{ item.data.title }}</h3>
                 </a>
-                <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="" /></a>
-            </li>
-        
+            </div>
+            <div>
+                <a href="{{ item.url }}" class="link"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="" /></a>
+            </div>
+        </li>
         {% endif %}
         {% endfor %}
     </ul>
+</div>

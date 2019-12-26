@@ -1,28 +1,35 @@
 ---
 layout: base.njk
 ---
-<p>this uses the "item" template</p>
-    <p class="">
-        {{ content | safe }}
-    </p>
-    <!-- not working for show pages -->
-    <a href="../../{{ ID | url }}">&larr; back to book index</a>
-    <p>Tags:</p>
-    <ul class="">
-        {% for tag in collections.tagList %}
-        <li class="">
-            {% if tag == "group" %}
-            {% elif tag == "item" %}
-            {% elif tag == "featured" %}
-            {% else %}
-            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="">{{ tag }}</a>
-            {% endif %}
+<!-- <p>this uses the "item" template</p> -->
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
+        <li class="fl w-100 w-50-ns pr3 pb3 mb3">
+            <div class="">
+                <img src="/img/{{ image }}" alt="{{ title }}" class="" />
+            </div>
         </li>
-        {% endfor %}
+        <li class="fl w-100 w-50-ns">
+            <div class="bt bw3">
+                <p class="">
+                    {{ content | safe }}
+                </p>
+                <a href="../../{{ ID | url }}">&larr; back to book index</a>
+                <p>Tags:</p>
+                <ul class="list pl0">
+                    {% for tag in collections.tagList %}
+                    <li class="">
+                        {% if tag == "group" %}
+                        {% elif tag == "item" %}
+                        {% elif tag == "featured" %}
+                        {% else %}
+                        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                        <a href="{{ tagUrl | url }}" class="link">{{ tag }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
     </ul>
-    <!-- <time class="f6 ttu tracked gray">Sometime before 1967</time> -->
-
-<div class="">
-    <img src="/img/{{ image }}" alt="{{ title }}" class="" />
 </div>

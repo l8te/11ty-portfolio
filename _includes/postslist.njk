@@ -1,22 +1,27 @@
-
-<div>
-    {% for post in postslist | reverse %}
-    <a href="{{ post.url | url }}" class="">
-        {{ post.data.title }}
-    </a>
-    <a href="{{ post.url }}"><img src="/img/{{ post.data.image }}" alt="{{ description }}" class="" /></a>
-    <ul class="">
-        {% for tag in post.data.tags %}
-        {% if tag == "group" %}
-        {% elif tag == "item" %}
-        {% elif tag == "featured" %}
-        {% else %}
-        <li class="">
-            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="">{{ tag }}</a>
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
+        {% for post in postslist | reverse %}
+        <li class="fl w-100 w-25-ns pr3 pb3 mb3">
+            <div class="bt bw3">
+            <a href="{{ post.url | url }}" class="link">
+                <h3 class="">{{ post.data.title }}</h3>
+            </a>
+        </div>
+            <a href="{{ post.url }}" class="link"><img src="/img/{{ post.data.image }}" alt="{{ description }}" class="" /></a>
+            <ul class="list pl0">
+                {% for tag in post.data.tags %}
+                {% if tag == "group" %}
+                {% elif tag == "item" %}
+                {% elif tag == "featured" %}
+                {% else %}
+                <li class="">
+                    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                    <a href="{{ tagUrl | url }}" class="link">{{ tag }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endfor %}
         </li>
-        {% endif %}
-        {% endfor %}
     </ul>
-    {% endfor %}
 </div>

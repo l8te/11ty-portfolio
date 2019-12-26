@@ -4,12 +4,15 @@ layout: base.njk
 ---
 <h2>All tags:</h2>
 <p>
-    <ul>
+    <ul class="list pl0">
         {% for tag in collections.tagList %}
         <li class="">
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <!-- ideally list how many are in each tag -->
             <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
         </li>
         {% endfor %}
     </ul>
 </p>
+
+<!-- <h2>Or view by year:</h2> -->
