@@ -2,11 +2,11 @@
 permalink: /tags/
 layout: base.njk
 ---
-<h1>All tags:</h1>
+<h2>All tags:</h2>
 <p>
     <ul>
         {% for tag in collections.tagList %}
-        <li class="f6 link dim ba ph3 pv2 mb2 dib black">
+        <li class="">
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
         </li>

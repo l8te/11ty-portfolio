@@ -11,8 +11,6 @@ eleventyNavigation:
 
 is the internet home of the work of Lee Ely, a Brooklyn-based artist. Browse the library to see sketchbook pages, or take a look at recent/upcoming shows.
 
-***
-
 To do:
-- back button or breadcrumb nav from item pages
+- ~~back button or breadcrumb nav from item pages~~
 - strip styles

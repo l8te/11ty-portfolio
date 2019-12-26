@@ -1,46 +1,22 @@
-<!-- can't add frontmatter for some reason -->
-<div class="bt bw2">
-    <div class="cf lh-copy">
+
+<div>
     {% for post in postslist | reverse %}
-        <div class="fl w-100 w-25-ns pr3">
-            <div class="">
-                <a href="{{ post.url | url }}" class="postlist-link fw1 lh-copy">
-            {{ post.data.title }}
-        </a>
-
-                <a href="{{ post.url }}"><img src="/img/{{ post.data.image }}" alt="{{ description }}" class="nested-img img h5" /></a>
-                <ul class="list ph0 pt3">
-                {% for tag in post.data.tags %}
-                <li class="di">
-                    {% if tag == "group" %}
-                    {% elif tag == "item" %}
-                    {% elif tag == "featured" %}
-                    {% else %}
-                    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                    <a href="{{ tagUrl | url }}" class="tag f6 link dim ba ph3 pv2 mb2 dib black">{{ tag }}</a>
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
-            </div>
-        </div>
+    <a href="{{ post.url | url }}" class="">
+        {{ post.data.title }}
+    </a>
+    <a href="{{ post.url }}"><img src="/img/{{ post.data.image }}" alt="{{ description }}" class="" /></a>
+    <ul class="">
+        {% for tag in post.data.tags %}
+        {% if tag == "group" %}
+        {% elif tag == "item" %}
+        {% elif tag == "featured" %}
+        {% else %}
+        <li class="">
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a href="{{ tagUrl | url }}" class="">{{ tag }}</a>
+        </li>
+        {% endif %}
         {% endfor %}
-    </div>
+    </ul>
+    {% endfor %}
 </div>
-
-<!-- scraps -->
-
-<!-- <ul reversed class="list ph0 pt3 postlist" style="counter-reset: start-from {{ postslist.length + 1 }}"> -->
-    <!-- {% for post in postslist | reverse %} -->
-    <!-- <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}"> -->
-        <!-- <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ description }}" class="nested-img img h5" /></a> -->
-        <!-- <a href="{{ post.url | url }}" class="postlist-link"> -->
-            <!-- {{ post.data.title }} -->
-        <!-- </a> -->
-        <!-- <p> -->
-            <!-- statement to evaluate tags and only return the ones we want -->
-            
-        <!-- </p> -->
-    <!-- </li> -->
-    <!-- {% endfor %} -->
-<!-- </ul> -->

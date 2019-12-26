@@ -7,64 +7,48 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/tachyons.css">
-    <!-- <link rel="stylesheet" href="/css/custom.css"> -->
+    <!-- <link rel="stylesheet" href="/css/tachyons.css"> -->
 </head>
 
-<body class="bg-near-white mid-gray helvetica fw3 ph3 pt3">
+<body class="">
     <div>
         {{ collections.nav | eleventyNavigation | eleventyNavigationToHtml({
-        listElement: "div", listItemElement: "div", listClass: "list", listItemClass: "fr pl2 link"
+        listElement: "div", listItemElement: "div", listClass: "list", listItemClass: "link"
         }) | safe }}
     </div>
-    <article class="lh-copy">
-        <h1 class="georgia fw1 lh-title"><a href="/">{{ metadata.title }}</a></h1>
-        <!-- if this is not the homepage, display the page title -->
-        {% if page.url != "/" %}
-        <h2 class="fw3 lh-title">{{ title }}</h2>
-        {%- endif -%}
-        <p>
-            {{ content | safe }}
-        </p>
-        <!-- here: eval if this is home, if home show "shows" list -->
-        <!-- need to add links -->
-        {% if page.url == "/" %}
-        <h2 class="fw1 georgia lh-title">Featured</h2>
-        {%- for featured in collections.featured -%}
-        <a href="{{ featured.url | url }}" class="fw3 lh-title">
-            {{ featured.data.title }}
-        </a>
-        <div class="pt3">
-            <div class="cf">
-                <div class="fl w-100 w-25-ns pr3">
-                    <a href="{{ featured.url | url }}">
-                        <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="nested-img img" />
-                    </a>
-                </div>
-                <div class="fl w-100 w-75-ns pt3 bt bw2">
-                    <date class="mid-gray lh-copy">
-                        {{ featured.data.date | htmlDateString }}
-                    </date>
-                    <p class="mt1">
-                        {{ featured.data.description }}
-                    </p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-        {% endif %}
+    <h1 class=""><a href="/">{{ metadata.title }}</a></h1>
+    <!-- if this is not the homepage, display the page title -->
+    {% if page.url != "/" %}
+    <h2 class="">{{ title }}</h2>
+    {%- endif -%}
+    <!-- page content -->
+    <article>
+        {{ content | safe }}
     </article>
-    <footer class="pt3 mt3 bt bw2">
+    <!-- here: eval if this is home, if home show "shows" list -->
+    {% if page.url == "/" %}
+    <h3 class="">Featured</h3>
+    {%- for featured in collections.featured -%}
+    <a href="{{ featured.url | url }}" class="">
+        {{ featured.data.title }}
+    </a>
+    <div class="">
+        <div class="">
+            <a href="{{ featured.url | url }}">
+                <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="" />
+            </a>
+        </div>
+        <div class="">
+            <p class="">
+                {{ featured.data.description }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <footer class="">
         &copy; {{ metadata.title }} | built with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://tachyons.io/">Tachyons</a>
     </footer>
 </body>
 
 </html>
-<!-- <br /> -->
-<!-- this is for QA - shows all pages -->
-<!-- <hr />
-    <ul>
-        {%- for post in collections.all -%}
-        <li><a href="{{ post.url }}">{{ post.url }}</a></li>
-        {%- endfor -%}
-    </ul> -->

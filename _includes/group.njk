@@ -1,23 +1,19 @@
 ---
 layout: base.njk
 ---
-<!-- <p>this uses the "group" template</p> -->
-<article>
-<p class="lh-copy">{{ content | safe }}</p>
-<div class="bt bw2">
-    <div class="cf lh-copy">
+<p>this uses the "group" template</p>
+<p class="">{{ content | safe }}</p>
+
+    <ul class="">
         {% for item in collections.item %}
         {% if item.data.ID == ID %}
-        <div class="fl w-100 w-25-ns pr3">
-            <div class="">
+            <li class="">
                 <a href="{{ item.url }}">
-                    <h3 class="fw3 link lh-copy">{{ item.data.title }}</h3>
+                    <h3 class="">{{ item.data.title }}</h3>
                 </a>
-                <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="nested-img img" /></a>
-            </div>
-        </div>
+                <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="" /></a>
+            </li>
+        
         {% endif %}
         {% endfor %}
-    </div>
-</div>
-</article>
+    </ul>
