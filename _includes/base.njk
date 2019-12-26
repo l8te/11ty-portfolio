@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" /> -->
     <!-- <link rel="stylesheet" href="/css/tachyons.css"> -->
 </head>
 
@@ -16,36 +17,40 @@
         listElement: "div", listItemElement: "div", listClass: "list", listItemClass: "link"
         }) | safe }}
     </div>
-    <h1 class=""><a href="/">{{ metadata.title }}</a></h1>
+    <h1 class="">
+        <a href="/">
+            {{ metadata.title }}
+        </a>
+    </h1>
     <!-- if this is not the homepage, display the page title -->
     {% if page.url != "/" %}
-    <h2 class="">{{ title }}</h2>
+        <h2 class="">{{ title }}</h2>
     {%- endif -%}
     <!-- page content -->
-    <article>
+    <article class="">
         {{ content | safe }}
     </article>
     <!-- here: eval if this is home, if home show "shows" list -->
+    <div>
     {% if page.url == "/" %}
-    <h3 class="">Featured</h3>
-    {%- for featured in collections.featured -%}
-    <a href="{{ featured.url | url }}" class="">
-        {{ featured.data.title }}
-    </a>
-    <div class="">
-        <div class="">
-            <a href="{{ featured.url | url }}">
-                <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="" />
+        <h3 class="">Featured</h3>
+        {%- for featured in collections.featured -%}
+            <a href="{{ featured.url | url }}" class="">
+                {{ featured.data.title }}
             </a>
-        </div>
-        <div class="">
-            <p class="">
-                {{ featured.data.description }}
-            </p>
-        </div>
-    </div>
+            <div class="">
+                <a href="{{ featured.url | url }}">
+                    <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="" />
+                </a>
+            </div>
+            <div class="">
+                <p class="">
+                    {{ featured.data.description }}
+                </p>
+            </div>
     {% endfor %}
     {% endif %}
+    </div>
     <footer class="">
         &copy; {{ metadata.title }} | built with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://tachyons.io/">Tachyons</a>
     </footer>
