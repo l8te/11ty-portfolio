@@ -31,14 +31,14 @@
         {% if page.url == "/" %}
         <h2 class="fw1 georgia lh-title">Featured</h2>
         {%- for featured in collections.featured -%}
-        <a href="{{ featured.url }}" class="fw3 lh-title">
+        <a href="{{ featured.url | url }}" class="fw3 lh-title">
             {{ featured.data.title }}
         </a>
         <div class="pt3">
             <div class="cf">
                 <div class="fl w-100 w-25-ns pr3">
-                    <a href="{{ featured.url }}">
-                        <img src="groups/items/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="nested-img img" />
+                    <a href="{{ featured.url | url }}">
+                        <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="nested-img img" />
                     </a>
                 </div>
                 <div class="fl w-100 w-75-ns pt3 bt bw2">

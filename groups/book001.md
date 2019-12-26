@@ -4,9 +4,9 @@ title: book 01
 description: This is the first sketchbook
 image: 201702_20170805_0008.jpg
 eleventyNavigation:
-  key: book01
+  key: book001
   parent: library
-ID: book01
+ID: book001
 ---
 
 <!-- note: a blank or additional tag breaks the link of library.json -->

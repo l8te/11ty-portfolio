@@ -5,7 +5,7 @@ description: Semiotics concrete
 image: partsInside_Scan01.png
 tags:
     - another tag
-ID: Stumptown
+ID: PartsInside
 ---
 
 Human knife artisanal meta-pistol decay woman bridge youtube receding monofilament. 
