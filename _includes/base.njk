@@ -13,11 +13,11 @@
 <body class="pa3 ma3 lh-copy purple bg-washed-yellow">
     <nav class="pa0 pa0-ns fr">
         {{ collections.nav | eleventyNavigation | eleventyNavigationToHtml({
-        listElement: "ul", listItemElement: "li", listClass: "list pl0", listItemClass: "link dib mr3"
+        listElement: "ul", listItemElement: "li", listClass: "list pl0", listItemClass: "dib mr3 underline hover-bg-hot-pink"
         }) | safe }}
     </nav>
     <h1 class="pt3">
-        <a href="/" class="link">
+        <a href="/" class="link dib underline hover-bg-hot-pink">
             {{ metadata.title }}
         </a>
     </h1>
@@ -29,12 +29,13 @@
     <article class="">
         {{ content | safe }}
     </article>
-    <!-- here: eval if this is home, if home show "shows" list -->
+    <!-- here: eval if this is home, if home show featured tag -->
     <div class="center ph0-ns">
         {% if page.url == "/" %}
         {% for featured in collections.featured %}
+        <h2>Featured:</h2>
         <h3 class="">
-            <a href="/" class="link">
+            <a href="{{ featured.url | url }}" class="link dib underline hover-bg-hot-pink">
                 {{ featured.data.title }}
             </a>
         </h3>
@@ -49,10 +50,10 @@
                     </p>
                 </div>
             </li>
-            <li class="fl w-100 w-50-ns pr3">
+            <li class="fl w-100 w-50-ns">
                 <div class="">
-                    <a href="{{ featured.url | url }}" class="link">
-                        <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="" />
+                    <a href="{{ featured.url | url }}" class="link dim">
+                        <img src="/img/{{ featured.data.image }}" alt="{{ featured.data.title }}" class="img" />
                     </a>
                 </div>
             </li>
@@ -60,8 +61,11 @@
         {% endfor %}
         {% endif %}
     </div>
-    <footer class="">
-        &copy; <a href="/" class="link">{{ metadata.title }}</a> | built with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://tachyons.io/">Tachyons</a>
+    <footer class="bt bw3">
+        <p class="f6">
+            &copy; <a href="/" class="link dib underline hover-bg-hot-pink">{{ metadata.title }}</a> | built with <a href="https://www.11ty.dev/" class="link dib underline hover-bg-hot-pink">11ty</a> and <a href="https://tachyons.io/" class="link dib underline hover-bg-hot-pink">Tachyons</a>
+        </p>
+        
     </footer>
 </body>
 

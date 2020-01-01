@@ -9,14 +9,14 @@ layout: base.njk
     <ul class="list pl0 cf ph0-ns">
         {% for item in collections.item %}
         {% if item.data.ID == ID %}
-        <li class="fl w-100 w-25-ns pr3 pb3 mb3">
+        <li class="fl mb5-ns h5-ns w-100 w-25-ns pr3">
             <div class="bt bw3">
-                <a href="{{ item.url | url}}" class="link">
-                    <h3 class="">{{ item.data.title }}</h3>
+                <h3 class="pt3 pb3 ma0">
+                <a href="{{ item.url | url}}" class="link dib underline hover-bg-hot-pink">
+                   {{ item.data.title }}
                 </a>
-            </div>
-            <div>
-                <a href="{{ item.url }}" class="link"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="" /></a>
+                </h3>
+                <a href="{{ item.url }}" class="link dim"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="img" /></a>
             </div>
         </li>
         {% endif %}

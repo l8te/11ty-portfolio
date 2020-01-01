@@ -7,7 +7,7 @@
                 <h3 class="">{{ post.data.title }}</h3>
             </a>
         </div>
-            <a href="{{ post.url }}" class="link"><img src="/img/{{ post.data.image }}" alt="{{ description }}" class="" /></a>
+            <a href="{{ post.url }}" class="link dim"><img src="/img/{{ post.data.image }}" alt="{{ description }}" class="img dim" /></a>
             <ul class="list pl0">
                 {% for tag in post.data.tags %}
                 {% if tag == "group" %}
@@ -16,7 +16,7 @@
                 {% else %}
                 <li class="">
                     {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                    <a href="{{ tagUrl | url }}" class="link">{{ tag }}</a>
+                    <a href="{{ tagUrl | url }}" class="link underline hover-bg-hot-pink">{{ tag }}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
