@@ -9,7 +9,7 @@ tags:
 eleventyNavigation:
   key: Parts Inside
   parent: shows
-ID: PartsInside
+ID: parts-inside
 ---
 
 <!-- note: a blank or additional tag breaks the link of library.json -->

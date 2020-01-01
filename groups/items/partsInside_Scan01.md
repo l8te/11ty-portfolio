@@ -1,17 +1,10 @@
 ---
 layout: item
-title: page 01
-description: Semiotics concrete
+title: 9 out of 10 (Doctors Agree)
+description: Morning glory, text, purple square.
 image: partsInside_Scan01.png
 tags:
-    - another tag
-ID: PartsInside
+    - plants
+    - flowers
+ID: parts-inside
 ---
-
-Human knife artisanal meta-pistol decay woman bridge youtube receding monofilament. 
-- add "layout" in script
-- "title" 
-- "description"
-- "image" = file name
-- "tags" will need to be formated by script
-- "ID" set in spreadsheet, is book name

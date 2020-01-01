@@ -1,26 +1,27 @@
 ---
 layout: base.njk
 ---
-this uses the "page" template
-<article>
-    <p class="lh-copy">
-        {{ content | safe }}
-    </p>
-    <div>
+<p>this uses the "page" template</p>
+<p class="">
+    {{ content | safe }}
+</p>
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
         {% for group in collections.group %}
         {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
-        <div class="cf">
-            <div class="fl w-100 w-25-ns pr3">
-                <a href="{{ group.url | url }}"><img src="/img/{{ group.data.image }}" alt="{{ group.data.title }}" class="nested-img img" /></a>
-            </div>
-            <div class="fl w-100 w-75-ns bt bw2">
-                <a href="{{ group.url | url }}">
-                    <h3 class="fw3 link">{{ group.data.title }}</h3>
+        <li class="fl w-100 w-33-ns pr3 pb3 mb3">
+            <div class="bt bw3">
+                <h3 class="pt3 pb3 ma0">
+                <a href="{{ group.url | url }}" class="link dib underline hover-bg-hot-pink">
+                    {{ group.data.title }}
                 </a>
-                <p>{{ group.data.description }}</p>
+                </h3>
             </div>
-        </div>
+            <div class="pb3">
+                <a href="{{ group.url | url }}" class="link dim"><img src="/img/{{ group.data.image }}" alt="{{ group.data.title }}" class="img" /></a>
+            </div>
+        </li>
         {% endif %}
         {% endfor %}
-    </div>
-</article>
+    </ul>
+</div>

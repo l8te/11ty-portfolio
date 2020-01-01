@@ -1,32 +1,35 @@
 ---
 layout: base.njk
 ---
-<article class="cf">
-        <p>this uses the "item" template</p>
-
-    <header class="fn fl-ns w-50-ns pr3-ns">
-        <p class="f2 lh-title fw9 mb3 mt0 pt1 bt bw2 ">
-            {{ content | safe }}
-        </p>
-        <a href="../../{{ ID | url }}">&larr; back to book index</a>
-        <p>Tags:</p>
-        <ul class="list ph0 pt3">
-            {% for tag in collections.tagList %}
-            <li class="di">
-                {% if tag == "group" %}
-                {% elif tag == "item" %}
-                {% elif tag == "featured" %}
-                {% else %}
-                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                <a href="{{ tagUrl | url }}" class="f6 link dim ba ph3 pv2 mb2 dib black">{{ tag }}</a>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-
-        <!-- <time class="f6 ttu tracked gray">Sometime before 1967</time> -->
-    </header>
-    <div class="fn fl-ns w-50-ns mw-100">
-        <img src="/img/{{ image }}" alt="{{ title }}" class="nested-img img" />
-    </div>
-</article>
+<!-- <p>this uses the "item" template</p> -->
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
+        <li class="fl w-100 w-50-ns pr3 mb3">
+            <div class="">
+                <img src="/img/{{ image }}" alt="{{ title }}" class="img" />
+            </div>
+        </li>
+        <li class="fl w-100 w-50-ns">
+            <div class="bt bw3">
+                <p class="">
+                    {{ description | safe }}
+                </p>
+                <a href="../../{{ ID | url }}" class="link dib underline hover-bg-hot-pink">&larr; back to index</a>
+                <h3>Tags:</h3>
+                <ul class="list pl0">
+                    {% for tag in tags %}
+                    <li class="dib mr3 fl">
+                        {% if tag == "group" %}
+                        {% elif tag == "item" %}
+                        {% elif tag == "featured" %}
+                        {% else %}
+                        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                        <a href="{{ tagUrl | url }}" class="link dib underline hover-bg-hot-pink">{{ tag }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -2,22 +2,24 @@
 layout: base.njk
 ---
 <!-- <p>this uses the "group" template</p> -->
-<article>
-<p class="lh-copy">{{ content | safe }}</p>
-<div class="bt bw2">
-    <div class="cf lh-copy">
+<p class="">
+    {{ content | safe }}
+</p>
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
         {% for item in collections.item %}
         {% if item.data.ID == ID %}
-        <div class="fl w-100 w-25-ns pr3">
-            <div class="">
-                <a href="{{ item.url }}">
-                    <h3 class="fw3 link lh-copy">{{ item.data.title }}</h3>
+        <li class="fl mb5-ns h5-ns w-100 w-25-ns pr3">
+            <div class="bt bw3">
+                <h3 class="pt3 pb3 ma0">
+                <a href="{{ item.url | url}}" class="link dib underline hover-bg-hot-pink">
+                   {{ item.data.title }}
                 </a>
-                <a href="{{ item.url }}"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="nested-img img" /></a>
+                </h3>
+                <a href="{{ item.url }}" class="link dim"><img src="/img/{{ item.data.image }}" alt="{{ title }}" class="img" /></a>
             </div>
-        </div>
+        </li>
         {% endif %}
         {% endfor %}
-    </div>
+    </ul>
 </div>
-</article>
