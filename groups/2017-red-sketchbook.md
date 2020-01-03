@@ -3,7 +3,7 @@ layout: group
 title: Red Sketchbook
 description: This is the first sketchbook
 image: 201702_20170805_0001.jpg
-date: 2017-02
+date: 2017-02-01
 eleventyNavigation:
   key: 2017-red-sketchbook
   parent: library

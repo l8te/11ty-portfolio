@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 ---
-<!-- <p>this uses the "group" template</p> -->
+<p>this uses the "group" template</p>
 <p class="">
     {{ content | safe }}
 </p>
@@ -9,7 +9,6 @@ layout: base.njk
     <ul class="list pl0 cf ph0-ns">
         {% for item in collections.item %}
         {% if item.data.ID == ID %}
-        <!-- <li class="fl mb5-ns h5-ns w-100 w-25-ns pr3"> -->
         <li class="fl w-100 w-25-ns pr3 pb3 mb3">
 
             <div class="bt bw3">

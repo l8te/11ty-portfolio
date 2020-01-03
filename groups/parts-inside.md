@@ -3,7 +3,7 @@ layout: group
 title: '" PARTS INSIDE "'
 description: Solo show at The Living Gallery, Brooklyn, NYC.
 image: partsInside_Scan00.png
-date: 2019-12
+date: 2019-12-01
 tags:
     - featured
 eleventyNavigation:
