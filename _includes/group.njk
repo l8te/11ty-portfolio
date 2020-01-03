@@ -9,10 +9,12 @@ layout: base.njk
     <ul class="list pl0 cf ph0-ns">
         {% for item in collections.item %}
         {% if item.data.ID == ID %}
-        <li class="fl mb5-ns h5-ns w-100 w-25-ns pr3">
+        <!-- <li class="fl mb5-ns h5-ns w-100 w-25-ns pr3"> -->
+        <li class="fl w-100 w-25-ns pr3 pb3 mb3">
+
             <div class="bt bw3">
                 <h3 class="pt3 pb3 ma0">
-                <a href="{{ item.url | url}}" class="link dib underline hover-bg-hot-pink">
+                <a href="{{ item.url | url}}" class="link dark-gray dib underline hover-bg-hot-pink">
                    {{ item.data.title }}
                 </a>
                 </h3>

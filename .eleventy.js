@@ -1,22 +1,33 @@
-const { DateTime } = require("luxon");
+// const { DateTime } = require("luxon");
 const fs = require("fs");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const moment = require('moment');
+ 
+moment.locale('en');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginNavigation);
 
     eleventyConfig.setDataDeepMerge(true);
 
-    eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
-    });
+    eleventyConfig.addFilter('dateIso', date => {
+    return moment(date).toISOString();
+  });
+ 
+  eleventyConfig.addFilter('dateReadable', date => {
+    return moment(date).format('LL'); // E.g. May 31, 2019
+  });
 
-    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-    });
+    // eleventyConfig.addFilter("readableDate", dateObj => {
+    //     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
+    // });
+
+    // // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+    // eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    //     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+    // });
 
     // Get the first `n` elements of a collection.
     eleventyConfig.addFilter("head", (array, n) => {

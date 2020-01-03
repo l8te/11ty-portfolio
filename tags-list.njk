@@ -10,7 +10,7 @@ layout: base.njk
         <li class="">
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <!-- ideally list how many are in each tag -->
-            <a href="{{ tagUrl | url }}" class="tag link dib underline hover-bg-hot-pink">{{ tag }}</a>
+            <a href="{{ tagUrl | url }}" class="tag link dark-gray dib underline hover-bg-hot-pink">{{ tag }}</a>
         </li>
         {% endfor %}
     </ul>

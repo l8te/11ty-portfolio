@@ -1,12 +1,13 @@
 ---
 layout: group
-title: book 01
+title: Red Sketchbook
 description: This is the first sketchbook
-image: 201702_20170805_0008.jpg
+image: 201702_20170805_0001.jpg
+date: 2017-02
 eleventyNavigation:
-  key: book001
+  key: 2017-red-sketchbook
   parent: library
-ID: book001
+ID: 2017-red-sketchbook
 ---
 
 <!-- note: a blank or additional tag breaks the link of library.json -->

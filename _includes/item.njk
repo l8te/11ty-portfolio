@@ -12,9 +12,10 @@ layout: base.njk
         <li class="fl w-100 w-50-ns">
             <div class="bt bw3">
                 <p class="">
+                    {{ date | dateReadable }}
                     {{ description | safe }}
                 </p>
-                <a href="../../{{ ID | url }}" class="link dib underline hover-bg-hot-pink">&larr; back to index</a>
+                <a href="../../{{ ID | url }}" class="link dark-gray dib underline hover-bg-hot-pink">&larr; back to index</a>
                 <h3>Tags:</h3>
                 <ul class="list pl0">
                     {% for tag in tags %}
@@ -24,7 +25,7 @@ layout: base.njk
                         {% elif tag == "featured" %}
                         {% else %}
                         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                        <a href="{{ tagUrl | url }}" class="link dib underline hover-bg-hot-pink">{{ tag }}</a>
+                        <a href="{{ tagUrl | url }}" class="link dark-gray dib underline hover-bg-hot-pink">{{ tag }}</a>
                         {% endif %}
                     </li>
                     {% endfor %}
