@@ -1,18 +1,18 @@
 ---
 layout: base.njk
 ---
-<p>this uses the "group" template</p>
+<!-- <p>this uses the "group" template</p> -->
 <p class="">
     {{ content | safe }}
 </p>
 <div class="center ph0-ns">
-    <ul class="list pl0 cf ph0-ns">
+    <ul class="list cf pl0 ph0-ns">
         {% for item in collections.item %}
         {% if item.data.ID == ID %}
-        <li class="fl w-100 w-25-ns pr3 pb3 mb3">
+        <li class="fl w-100 w-25-ns vh-75-ns pr0 pr3-ns">
 
             <div class="bt bw3">
-                <h3 class="pt3 pb3 ma0">
+                <h3 class="ma0 pv3">
                 <a href="{{ item.url | url}}" class="link dark-gray dib underline hover-bg-hot-pink">
                    {{ item.data.title }}
                 </a>
@@ -24,3 +24,4 @@ layout: base.njk
         {% endfor %}
     </ul>
 </div>
+

@@ -4,17 +4,15 @@ layout: base.njk
 ---
 <h2>All tags:</h2>
 
-<p>
-    <ul class="list pl0">
+    <ul class="list pl0 cf">
         {% for tag in collections.tagList %}
-        <li class="">
+        <li class="fl pr3">
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <!-- ideally list how many are in each tag -->
             <a href="{{ tagUrl | url }}" class="tag link dark-gray dib underline hover-bg-hot-pink">{{ tag }}</a>
         </li>
         {% endfor %}
     </ul>
-</p>
 
 <p class="f6">
     New and improved "all tags" page coming Spring 2020-ish.

@@ -4,6 +4,7 @@ node_modules/
 _site/
 *.png
 *.jpg
+*.md
 
 # Compiled source #
 ###################
