@@ -1,24 +1,23 @@
 ---
-layout: base.njk
+layout: layouts/base
 ---
 <p>this uses the "page" template</p>
 <p class="">
     {{ content | safe }}
 </p>
 <div class="center ph0-ns">
-    <ul class="list pl0 cf ph0-ns">
+    <ul class="list cf pl0 ph0-ns">
         {% for group in collections.group %}
         {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
-        <li class="fl w-100 w-33-ns pr3 pb3 mb3">
+        <li class="fl w-100 w-33-ns vh-75-ns pr0 pr3-ns">
             <div class="bt bw3">
-                <h3 class="pt3 pb2 ma0">
+                <h3 class="ma0 pv3">
                 <a href="{{ group.url | url }}" class="link dark-gray dib underline hover-bg-hot-pink">
                     {{ group.data.title }}
                 </a>
                 </h3>
                 <p class="ma0 pb3 gray">{{ group.data.date | readableDate }}</p>
-            </div>
-            <div class="pb3">
+
                 <a href="{{ group.url | url }}" class="link dim"><img src="/img/{{ group.data.image }}" alt="{{ group.data.title }}" class="img" /></a>
             </div>
         </li>

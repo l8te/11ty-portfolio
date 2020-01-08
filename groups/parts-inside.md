@@ -1,5 +1,5 @@
 ---
-layout: group
+layout: layouts/group
 title: '" PARTS INSIDE "'
 description: Solo show at The Living Gallery, Brooklyn, NYC.
 image: partsInside_Scan00.png
@@ -21,4 +21,4 @@ These paintings were created over the space of 5 weeks.
 
 Acrylic on wood blocks and cardboard.
 
-Some originals available on BigCartel.
+<!-- Some originals available on BigCartel. -->

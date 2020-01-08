@@ -1,5 +1,5 @@
 ---
-layout: group
+layout: layouts/group
 title: Red Sketchbook
 description: This is the first sketchbook
 image: 201702_20170805_0001.jpg

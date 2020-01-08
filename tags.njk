@@ -11,7 +11,7 @@ pagination:
     - item
     - featured
   addAllPagesToCollections: true
-layout: base.njk
+layout: layouts/base
 renderData:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
@@ -19,6 +19,6 @@ permalink: /tags/{{ tag }}/
 <h2>Tagged “{{ tag }}”</h2>
 
 {% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
+
 
 <p>See <a href="{{ '/tags/' | url }}" class="link dark-gray dib underline hover-bg-hot-pink">all tags</a>.</p>

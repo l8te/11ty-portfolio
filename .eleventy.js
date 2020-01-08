@@ -3,27 +3,14 @@ const fs = require("fs");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-// const moment = require('moment');
- 
-// moment.locale('en');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginNavigation);
 
     eleventyConfig.setDataDeepMerge(true);
 
-  //   eleventyConfig.addFilter('dateIso', date => {
-  //   return moment(date).toISOString();
-  // });
- 
-  // eleventyConfig.addFilter('dateReadable', date => {
-  //   return moment(date).format('MMMM, YYYY'); // E.g. May 31, 2019
-  // });
-
-
-  // date in frontmatter needs to contain a day, even though it is not used
     eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("LLLL, yyyy");
+        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
     });
 
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

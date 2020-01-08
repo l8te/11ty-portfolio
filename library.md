@@ -1,7 +1,7 @@
 ---
-layout: page
-title: library
-description: Sentient boy, urban camera
+layout: layouts/page
+title: Library
+description: Sketchbook library.
 tags: 
     - nav
 eleventyNavigation:
@@ -9,4 +9,4 @@ eleventyNavigation:
   order: 3
 ---
 
-Into dome jeans corrupted ablative assassin pre-nodality alcohol sentient faded bomb paranoid rebar tank-traps marketing.
+A semi-comprehensive collection of sketchbooks.
