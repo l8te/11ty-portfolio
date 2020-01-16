@@ -9,8 +9,15 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setDataDeepMerge(true);
 
+    // eleventyConfig.addLayoutAlias("item", "layouts/item.njk");
+    // eleventyConfig.addLayoutAlias("group", "layouts/group.njk");
+    // eleventyConfig.addLayoutAlias("page", "layouts/page.njk");
+    // eleventyConfig.addLayoutAlias("postslist", "layouts/postslist.njk");
+    // eleventyConfig.addLayoutAlias("", "layouts/base.njk");
+
+
     eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
+        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("LLLL, yyyy");
     });
 
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
