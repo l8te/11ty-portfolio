@@ -4,7 +4,9 @@ title: Couldn't it be Easy
 description: Pocket knife, azaleas.
 image: partsInside_Scan05.png
 tags:
-    - knife
-    - flowers
+
+- knife
+
+- flowers
 ID: parts-inside
 ---

@@ -4,9 +4,13 @@ title: Inside and Out
 description: A mosquito, a key, an eye.
 image: partsInside_Scan03.png
 tags:
-    - keys
-    - bugs
-    - eyes
-    - bells
+
+- keys
+
+- bugs
+
+- eyes
+
+- bells
 ID: parts-inside
 ---

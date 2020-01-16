@@ -16,7 +16,7 @@
                 {% elif tag == "item" %}
                 {% elif tag == "featured" %}
                 {% else %}
-                <li class="">
+                <li class="fl pr3">
                     {% set tagUrl %}/tags/{{ tag }}/{% endset %}
                     <a href="{{ tagUrl | url }}" class="link underline hover-bg-hot-pink">{{ tag }}</a>
                 </li>
