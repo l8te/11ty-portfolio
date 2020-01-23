@@ -1,27 +1,27 @@
 ---
 layout: base.njk
 ---
-    <p>this uses the "group" template</p>
-    <p class="">
-        {{ content | safe }}
-    </p>
-    <div class="center ph0-ns">
-        <ul class="list cb vh-100-ns ph0">
-            {% for item in collections.item %}
-            {% if item.data.ID == ID %}
-            <li class="fl w-100 w-25-ns pr0 pr3-ns pb5">
-                <div class="bt bw3">
-                    <h3 class="ma0 pv3">
-                        <a href="{{ item.url | url}}" class="link dark-gray dib underline hover-bg-hot-pink">
-                            {{ item.data.title }}
-                        </a>
-                    </h3>
-                    <a href="{{ item.url }}" class="link dim"><div class="vh-75 cover bg-center" style="background-image: url(/img/{{ item.data.image }});" alt="{{item.data.title}}"></div>
-                </div>
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-
-  
+<!-- <p>this uses the "group" template</p> -->
+<p class="">
+    {{ content | safe }}
+</p>
+<div class="center ph0-ns">
+    <ul class="list cb vh-100-ns ph0">
+        {% for item in collections.item%}
+        {% if item.data.ID == ID %}
+        <li class="fl w-100 w-25-ns pr0 pr3-ns pb5">
+            <div class="bt bw3">
+                <h3 class="ma0 pv3">
+                    <a href="{{ item.url | url}}" class="link dark-gray dib underline hover-bg-hot-pink">
+                        {{ item.data.title }}
+                    </a>
+                </h3>
+                <a href="{{ item.url }}" class="link dim">
+                    <div class="vh-75 cover bg-center" style="background-image: url(/img/{{ item.data.image }});" alt="{{item.data.title}}"></div>
+                </a>
+            </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>

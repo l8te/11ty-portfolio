@@ -2,10 +2,10 @@
 layout: group
 title: '" PARTS INSIDE "'
 description: Solo show at The Living Gallery, Brooklyn, NYC.
-image: partsInside_Scan00.png
+image: partsInside_Scan00.jpg
 date: 2019-12-03
 tags:
-    - featured
+    - flyer
 eleventyNavigation:
   key: Parts Inside
   parent: shows
@@ -19,6 +19,6 @@ From the promotional blurb:
 
 These paintings were created over the space of 5 weeks.
 
-Acrylic on wood blocks and cardboard.
+Acrylic and paint marker on wood blocks and cardboard.
 
-Some originals available on BigCartel.
+Some originals will be available on BigCartel. *<---coming soon!*

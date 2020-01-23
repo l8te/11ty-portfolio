@@ -1,2 +1,4 @@
-.black { color: #000000 }
-.bg-near-white { background-color: #F4F4F4 }
+blockquote {
+    border-left: 0.5rem solid;
+    padding-left: 1rem;
+}

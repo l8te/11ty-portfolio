@@ -1,7 +1,7 @@
 ---
 layout: page
 title: library
-description: Sentient boy, urban camera
+description: Sketchbook archive
 tags: 
     - nav
 eleventyNavigation:
@@ -9,4 +9,6 @@ eleventyNavigation:
   order: 3
 ---
 
-Into dome jeans corrupted ablative assassin pre-nodality alcohol sentient faded bomb paranoid rebar tank-traps marketing. Marketing tank-traps Kowloon meta-wristwatch Legba singularity. Rifle franchise papier-mache tank-traps media A.I. dissident dome footage weathered systemic smart-nodal point. Sentient boy urban camera dolphin faded boat city apophenia. Neural dolphin human shanty town construct assault meta-ablative nodality sign footage grenade sensory face forwards claymore mine bicycle. 
+This aims to be a comprehensive, searchable archive of nearly all the sketchbooks I currently have with me. Right now, it is not nearly that, but I thought it might be worth sharing as it is.
+
+Dates on sketchbooks are the month they were started.

@@ -9,7 +9,10 @@
             </a>
             </h3>
         </div>
-            <a href="{{ post.url }}" class="link dim"><img src="/img/{{ post.data.image }}" alt="{{ description }}" class="img dim" /></a>
+        <a href="{{ post.url }}" class="link dim">
+                    <div class="vh-25 cover bg-center" style="background-image: url(/img/{{ post.data.image }});" alt="{{post.data.title}}"></div>
+                </a>
+           
             <ul class="list pl0">
                 {% for tag in post.data.tags %}
                 {% if tag == "group" %}

@@ -2,6 +2,10 @@
 layout: base.njk
 ---
 <!-- <p>this uses the "item" template</p> -->
+
+<!-- saving info for how to watermark a batch -->
+<!-- magick mogrify -font Arial -pointsize 36 -kerning 5 -fill xc:"graya(50%, 0.75)" -rotate -90 -gravity south -annotate +0+2 '@latewerks' -rotate 90 *.jpg -->
+s
 <div class="center ph0-ns">
     <ul class="list pl0 cf ph0-ns">
         <li class="fl w-100 w-50-ns pr3 mb3">
@@ -13,6 +17,9 @@ layout: base.njk
             <div class="bt bw3">
                 <p class="">
                     {{ description | safe }}
+                </p>
+                <p class="">
+                    {{ content | safe }}
                 </p>
                 <a href="../../{{ ID | url }}" class="link dib underline hover-bg-hot-pink">&larr; back to index</a>
                 <h3>Tags:</h3>
