@@ -9,16 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="/css/tachyons.css">
     <link rel="stylesheet" href="/css/custom.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151602077-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-151602077-2');
-</script>
-
+    
 </head>
 
 <body class="system-sans-serif pa3 ma3 lh-copy dark-gray bg-washed-yellow">
@@ -80,20 +71,25 @@
             &copy; <a href="/" class="link dark-gray dib underline hover-bg-hot-pink">{{ metadata.title }}</a> | built with <a href="https://www.11ty.dev/" class="link dark-gray dib underline hover-bg-hot-pink">11ty</a> and <a href="https://tachyons.io/" class="link dark-gray dib underline hover-bg-hot-pink">Tachyons</a>
         </p>
     </footer>
-    <!--  <footer class="bt bw3 z-1">
-        <p class="f6">
-            &copy; <a href="/" class="link dark-gray dib underline hover-bg-hot-pink">{{ metadata.title }}</a> | built with <a href="https://www.11ty.dev/" class="link dark-gray dib underline hover-bg-hot-pink">11ty</a> and <a href="https://tachyons.io/" class="link dark-gray dib underline hover-bg-hot-pink">Tachyons</a>
-        </p>
-        
-    </footer> -->
-    <!--     <br />
-    <p> this is for testing </p>
-    <hr />
-    <ul>
-        {%- for post in collections.all -%}
-        <li><a href="{{ post.url }}">{{ post.url }}</a></li>
-        {%- endfor -%}
-    </ul> -->
 </body>
 
 </html>
+
+<!-- Start Open Web Analytics Tracker -->
+<script type="text/javascript">
+//<![CDATA[
+var owa_baseUrl = 'https://www.latewerks.com/owa/';
+var owa_cmds = owa_cmds || [];
+owa_cmds.push(['setSiteId', 'e605bc4d0442c89d3938cb142e6c82c6']);
+owa_cmds.push(['trackPageView']);
+owa_cmds.push(['trackClicks']);
+
+(function() {
+    var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+    owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
+    _owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+    var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+}());
+//]]>
+</script>
+<!-- End Open Web Analytics Code -->
