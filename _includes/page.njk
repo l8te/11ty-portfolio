@@ -1,37 +1,35 @@
 ---
 layout: base.njk
 ---
-<!-- redo -->
-
-    <div>
-        <!-- <p>this uses the "page" template</p> -->
-        <p class="">
-            {{ content | safe }}
-        </p>
-    </div>
-    <div class="center ph0-ns ">
-        <!-- clear both, vertical height 100%, padding horizontal 0 -->
-        <ul class="list cb vh-100-ns ph0">
-            {% for group in collections.group %}
-            {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
-            <!-- float left, width 100, width 33% (not small), padding right 0, padding right 3em (not small) -->
-            <li class="fl w-100 w-third-ns pr0 pr3-ns pb5">
-                <!-- border top, border width 3 -->
-                <div class="bt bw3">
-                    <!-- margin all 0, padding verticle 3em -->
-                    <h3 class="ma0 pv3">
-                        <a href="{{ group.url | url }}" class="link dark-gray dib underline hover-bg-hot-pink">
-                            {{ group.data.title }}
-                        </a>
-                    </h3>
-                    <p class="ma0 pb3 gray">{{ group.data.date | readableDate }}</p>
-                    <!-- weirdly, dim stopped working -->
-                    <a href="{{ group.url | url }}" class="link dim">
-                        <div class="vh-75-ns cover bg-center" style="background-image: url(/img/{{ group.data.image }});"></div>
+<!-- this needs
+- title
+- date
+- thumbnail
+- 33% at full size -->
+<div>
+    <p>this uses the "page" template</p>
+    <p class="">
+        {{ content | safe }}
+    </p>
+</div>
+<div class="center ph0-ns">
+    <ul class="list cb vh-100-ns ph0">
+        {% for group in collections.group %}
+        {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
+        <li class="fl w-100 w-33-ns pr0 pr3-ns pb5">
+            <div class="bt bw3">
+                <h3 class="ma0 pv3">
+                    <a href="{{ group.url | url}}" class="link dark-gray dib underline hover-bg-hot-pink">
+                        {{ group.data.title }}
                     </a>
-                </div>
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+                </h3>
+                <p class="ma0 pb3 gray">{{ group.data.date | readableDate }}</p>
+                <a href="{{ group.url }}" class="link dim">
+                    <div class="vh-75 cover bg-center" style="background-image: url(/img/{{ group.data.image }});" alt="{{group.data.title}}"></div>
+                </a>
+            </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
