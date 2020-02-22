@@ -3,6 +3,7 @@
 node_modules/
 _site/
 img/
+groups/items/
 *.png
 *.jpg
 

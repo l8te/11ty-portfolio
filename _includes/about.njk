@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+
+<div class="center ph0-ns">
+    <ul class="list pl0 cf ph0-ns">
+        <li class="fl w-100 w-25-ns pr3 mb3">
+            <div class="">
+                <img src="/img/{{ image }}" alt="{{ description }}" class="img" />
+            </div>
+        </li>
+        <li class="fl w-100 w-75-ns">
+            <div class="bt bw3">
+                <p class="">
+                    {{ content | safe }}
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>

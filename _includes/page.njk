@@ -7,14 +7,14 @@ layout: base.njk
 - thumbnail
 - 33% at full size -->
 <div>
-    <p>this uses the "page" template</p>
+    <!-- <p>this uses the "page" template</p> -->
     <p class="">
         {{ content | safe }}
     </p>
 </div>
 <div class="center ph0-ns">
     <ul class="list cb vh-100-ns ph0">
-        {% for group in collections.group %}
+        {% for group in collections.group | reverse %}
         {% if group.data.eleventyNavigation.parent == eleventyNavigation.key %}
         <li class="fl w-100 w-33-ns pr0 pr3-ns pb5">
             <div class="bt bw3">

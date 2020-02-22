@@ -21,4 +21,4 @@ These paintings were created over the space of 5 weeks.
 
 Acrylic and paint marker on wood blocks and cardboard.
 
-Some originals will be available on BigCartel. *<---coming soon!*
+<!-- Some originals will be available on BigCartel. *<---coming soon!* -->
