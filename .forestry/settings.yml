@@ -5,9 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: 11ty-portfolio/about.md
+  path: 11ty-portfolio
   label: About
-  match: "**/*"
 - type: directory
   path: 11ty-portfolio/groups
   label: Groups
